@@ -27,5 +27,12 @@ pipeline {
                 sh 'npm run build'
             }
         }
+        stage('Delploy') {
+            steps {
+                sh './jenkins/deploy.sh'
+                input message: 'Finished using the web site? (Click "Proceed" to continue)'
+                sh './jenkins/kill.sh'
+            }
+        }
     }
 }
