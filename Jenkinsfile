@@ -12,11 +12,6 @@ pipeline {
                 sh 'npm install' 
             }
         }
-        stage('Lint') {
-            steps {
-                sh 'npm run lint'
-            }
-        }
         stage('Test') {
             steps {
                 sh 'npm run test'
@@ -24,9 +19,9 @@ pipeline {
         }
         stage('Deliver') {
             steps {
-                sh './jenkins/scripts/deliver.sh'
+                sh './jenkins/deliver.sh'
                 input message: 'Finished using the web site? (Click "Proceed" to continue)'
-                sh './jenkins/scripts/kill.sh'
+                sh './jenkins/kill.sh'
             }
         }
     }
