@@ -27,10 +27,5 @@ pipeline {
                 sh 'npm run build'
             }
         }
-        stage('Delploy') {
-            steps {
-                sh 'npm run start'
-            }
-        }
     }
 }
