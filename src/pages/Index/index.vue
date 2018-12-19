@@ -1,5 +1,5 @@
 <template>
-  <div> This is Index page</div>
+  <div> This is Index page {{text}}</div>
 </template>
 
 <script>
@@ -10,7 +10,7 @@ export default {
     }
   },
   mounted () {
-    alert('Show Index Page')
+    // alert('Show Index Page')
   }
 }
 </script>
