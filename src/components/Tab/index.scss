@@ -1,0 +1,28 @@
+.wrap {
+  width: 100%;
+  border-top: 1px solid #ebebeb;
+  position: fixed;
+  bottom: 0;
+}
+
+.tabs {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  list-style: none;
+}
+
+.tab-item {
+  flex: 1;
+  text-align: center;
+  line-height: 100%;
+  font-size: 18px;
+  color: #000;
+
+  .link {
+    text-decoration: none;
+    color: #000;
+  }
+}
