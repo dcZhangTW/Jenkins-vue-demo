@@ -9,11 +9,6 @@ pipeline {
         CI = 'true'
     }
     stages {
-        stage('Kill before') {
-            steps {
-                sh './jenkins/scripts/checkandkill.sh'
-            }
-        }
         stage('Build') { 
             steps {
                 sh 'node --version'
@@ -28,6 +23,8 @@ pipeline {
         stage('Deliver') {
             steps {
                 sh './jenkins/scripts/deliver.sh'
+                input message: 'Finished using the web site? (Click "Proceed" to continue)'
+                sh './jenkins/scripts/kill.sh'
             }
         }
     }
