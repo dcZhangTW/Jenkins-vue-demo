@@ -9,6 +9,11 @@ pipeline {
         CI = 'true'
     }
     stages {
+        stage('Kill Before') {
+            steps {
+                sh './jenkins/scripts/kill.sh'
+            }
+        }
         stage('Build') { 
             steps {
                 sh 'node --version'
