@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2>This is Index page {{text}}</h2>
-    <p>This is some description</p>
+    <p>This is some description to change</p>
   </div>
 </template>
 
@@ -9,7 +9,7 @@
 export default {
   data () {
     return {
-      text: 'Test trigger'
+      text: 'Test trigger in remote page'
     }
   },
   mounted () {
