@@ -9,7 +9,7 @@
 export default {
   data () {
     return {
-      text: 'Test trigger in remote page'
+      text: 'Test trigger'
     }
   },
   mounted () {
