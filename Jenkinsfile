@@ -10,7 +10,9 @@ pipeline {
     }
     stages {
         stage('Kill before') {
-            sh './jenkins/scripts/kill.sh'
+            steps {
+                sh './jenkins/scripts/checkandkill.sh'
+            }
         }
         stage('Build') { 
             steps {
